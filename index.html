@@ -1,0 +1,263 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyBud — AI Study Planner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="brand">
+        <button class="menu-btn" aria-label="Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M4 6H20M4 12H20M4 18H20" stroke="#1e90ff" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <div class="logo">EB</div>
+        <div class="brand-name">AI Study Planner</div>
+      </div>
+      <button class="logout-btn">Logout</button>
+    </header>
+
+    <main class="main-grid">
+      <section class="timetable">
+        <div class="timetable-top">
+          <div class="month-row">
+            <div class="month-title">October 2025</div>
+          </div>
+
+          <div class="week-nav">
+            <button class="arrow-btn prev-week" aria-label="Previous week">‹</button>
+            <div class="dates-dow">
+              <div class="dates-grid">
+                <div class="date-cell">13</div>
+                <div class="date-cell">14</div>
+                <div class="date-cell">15</div>
+                <div class="date-cell">16</div>
+                <div class="date-cell">17</div>
+                <div class="date-cell">18</div>
+                <div class="date-cell">19</div>
+              </div>
+              <div class="dow-grid">
+                <div class="dow-cell">Mon</div>
+                <div class="dow-cell">Tue</div>
+                <div class="dow-cell">Wed</div>
+                <div class="dow-cell">Thu</div>
+                <div class="dow-cell">Fri</div>
+                <div class="dow-cell">Sat</div>
+                <div class="dow-cell">Sun</div>
+              </div>
+            </div>
+            <button class="arrow-btn next-week" aria-label="Next week">›</button>
+          </div>
+
+          <div class="timetable-actions">
+            <button class="add-task" aria-label="Add task">+</button>
+          </div>
+        </div>
+
+        <div class="days-grid">
+          <div class="day-column">
+            <div class="tasks">
+              <article class="task-card">
+                <div class="task-meta">
+                  <div class="task-title">Math Homework</div>
+                  <div class="task-time">8:00 — 10:00 · 120m</div>
+                </div>
+                <div class="task-actions">
+                  <button class="btn edit">Edit</button>
+                  <button class="btn done">✓</button>
+                </div>
+              </article>
+
+              <article class="task-card">
+                <div class="task-meta">
+                  <div class="task-title">Review Lecture Notes</div>
+                  <div class="task-time">11:00 — 11:45 · 45m</div>
+                </div>
+                <div class="task-actions">
+                  <button class="btn edit">Edit</button>
+                  <button class="btn done">✓</button>
+                </div>
+              </article>
+
+              <article class="task-card">
+                <div class="task-meta">
+                  <div class="task-title">Extra Reading</div>
+                  <div class="task-time">13:00 — 14:00 · 60m</div>
+                </div>
+                <div class="task-actions">
+                  <button class="btn edit">Edit</button>
+                  <button class="btn done">✓</button>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="day-column">
+            <div class="tasks">
+              <article class="task-card">
+                <div class="task-meta">
+                  <div class="task-title">Coding Practice</div>
+                  <div class="task-time">14:00 — 15:00 · 60m</div>
+                </div>
+                <div class="task-actions">
+                  <button class="btn edit">Edit</button>
+                  <button class="btn done">✓</button>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="day-column"><div class="tasks"></div></div>
+          <div class="day-column"><div class="tasks"></div></div>
+
+          <div class="day-column">
+            <div class="tasks">
+              <article class="task-card">
+                <div class="task-meta">
+                  <div class="task-title">Essay Draft</div>
+                  <div class="task-time">9:00 — 11:00 · 120m</div>
+                </div>
+                <div class="task-actions">
+                  <button class="btn edit">Edit</button>
+                  <button class="btn done">✓</button>
+                </div>
+              </article>
+              <article class="task-card">
+                <div class="task-meta">
+                  <div class="task-title">Group Study Session</div>
+                  <div class="task-time">13:00 — 15:00 · 120m</div>
+                </div>
+                <div class="task-actions">
+                  <button class="btn edit">Edit</button>
+                  <button class="btn done">✓</button>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="day-column"><div class="tasks"></div></div>
+          <div class="day-column"><div class="tasks"></div></div>
+        </div>
+      </section>
+
+      <aside class="chat-panel">
+        <div class="chat-header">
+          <div class="chat-title">AI Study Assistant</div>
+          <div class="chat-notif">
+            <button class="notif-btn" aria-label="Notifications">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M12 22c1.1 0 2-.9 2-2H10c0 1.1.9 2 2 2z" fill="currentColor"/>
+                <path d="M18 16v-5c0-3.07-1.63-5.64-4.5-6.32V4a1.5 1.5 0 10-3 0v.68C7.63 5.36 6 7.92 6 11v5l-1.99 2H20l-2-2z" fill="currentColor"/>
+              </svg>
+            </button>
+            <div class="badge">3</div>
+          </div>
+        </div>
+
+        <div class="chat-body">
+          <div class="msg system">Hi! I can help schedule and optimize your study sessions.</div>
+          <div class="msg user">Schedule 2 hours for math on Monday morning.</div>
+          <div class="msg ai">Added "Math Homework" 8:00 — 10:00 on Monday. Want reminders?</div>
+        </div>
+
+        <div class="chat-input">
+          <input type="text" placeholder="Ask the assistant..." />
+          <button class="send" aria-label="Send message">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M22 2L11 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </aside>
+    </main>
+
+    <div class="sidebar-backdrop" data-role="sidebar-backdrop" aria-hidden="true">
+      <aside class="sidebar-panel" role="dialog" aria-label="Sidebar" aria-hidden="true">
+        <div class="sidebar-head">
+          <div class="sidebar-logo">EB</div>
+          <button class="close-sidebar" aria-label="Close sidebar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M6 6L18 18M6 18L18 6" stroke="#0b1220" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        <nav class="sidebar-list">
+          <button class="sidebar-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2v20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M5 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span>Settings</span>
+          </button>
+          <button class="sidebar-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path d="M3 13h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M7 6h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span>History</span>
+          </button>
+          <button class="sidebar-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path d="M12 3v18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M5 6h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span>Theme</span>
+          </button>
+          <button class="sidebar-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path d="M12 12a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4 21v-1a6 6 0 0112 0v1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+            <span>Account</span>
+          </button>
+        </nav>
+      </aside>
+    </div>
+
+    <div class="add-popup" aria-hidden="true" role="menu">
+      <button class="add-option" data-type="subject">➕ Subject Schedule</button>
+      <button class="add-option" data-type="performance">➕ Performance Task</button>
+      <button class="add-option" data-type="test">➕ Upcoming Test</button>
+    </div>
+
+    <div class="modal-backdrop" aria-hidden="true">
+      <div class="modal-card" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-head">
+          <div class="modal-title"></div>
+          <button class="modal-close" aria-label="Close form">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path d="M6 6L18 18M6 18L18 6" stroke="#0b1220" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        <form class="modal-form">
+          <div class="form-row">
+            <label>Task Name</label>
+            <input name="name" required />
+          </div>
+          <div class="form-row">
+            <label>Start Time</label>
+            <input name="start" type="time" required />
+          </div>
+          <div class="form-row">
+            <label>Duration (minutes)</label>
+            <input name="duration" type="number" min="5" required />
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn submit">Save</button>
+            <button type="button" class="btn cancel">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
